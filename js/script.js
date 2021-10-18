@@ -53,15 +53,15 @@ console.log(johnDoe);
 
 // ---------------- ARRAYS (MASīvi)
 
-let array = document.querySelector(`#array`);
+// let array = document.querySelector(`#array`);
 console.log(array);
 
-const cars =[`volvo`,`bmw`,`audi`];
+const cars =[`Volvo`,`Bmw`,`Audi`];
 
 console.log(cars)
 cars[0] = `Zaz`;
 
-array.innerHTML = `<li>${cars} </li>`;
+// array.innerHTML = `<li>${cars} </li>`;
 
 
 console.log(cars.length);
@@ -84,7 +84,71 @@ console.log(cars);
 
 //elementa bīdīšana shift() atbilstoši pārindeksē masīvu;
 
-let shiftedValue = cars.shift();
-console.log(cars);
-console.log(shiftedValue);
+// let shiftedValue = cars.shift();
+// console.log(cars);
+// console.log(shiftedValue);
+const motocikli =[`Java`,`Kawasaki`,`Honda`]
+//elementy vērtību izgriešana un pievienošana splice()
 
+// let slpicedValue = cars.splice(1,2, `Vw`,`Dacia`);
+// console.log(cars);
+// console.log(`Izgrieztais rādījums ${typeof slpicedValue}`);
+// console.log(slpicedValue);
+// slpicedValue[0] = `Tanks`;
+// console.log(`jaunā vērtība \n ${slpicedValue}`);
+// //----- Pievienojot masīvū, masīvā;
+// cars.splice(2,0, motocikli); //splice(kur sākt, kur izgriezt, [ko ievietot]);
+// console.log(cars);
+
+
+//masīcu apvienošana (izveido jaunu masīvu) concat();
+const transports = cars.concat(motocikli);
+
+console.log(transports);
+console.log(transports.length);
+
+let html = function(arr){
+    let text = "<div>";
+    arr.forEach(myFunction);
+    text += "</div>";
+    document.getElementById("array").innerHTML = text;
+    
+    function myFunction(value) {
+      text += "<h2>" + value + "</h2>";
+    } 
+}
+
+
+//slice() kopē no pozīcijas, kura norādīta, kā arguments vai parametrs slice(no kura indeksa, LĪDZ noteiktajam indeksam(NEIESKAITOT));
+
+let sliced_tp = transports.slice(0,3);
+html(sliced_tp);
+
+//Masīvā kārtošana sort() Tiek kārtots masīvs pārkārtots no jauna alfabētiskā secībā
+
+transports.sort();
+html(transports);
+
+//pārkārto masīvu otrādi  reverse()
+transports.reverse();
+html(transports);
+
+transports.sort().reverse();
+html(transports)//dilstošā secībā
+
+const math = [40,100,1,5,25,10];
+
+math.sort(function(a,b){
+    return a-b;
+});
+
+const math2 = math;
+
+math2.sort(function(a,b){
+    return a-b;
+});
+
+console.log(math2)
+// min max values
+console.log(math2[0])
+console.log(math2[math2.length -1])

@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+ul {
+  position: relative;
+  left: 10%;
+  list-style: decimal;
+}
+
+li {
+  padding: 5px;
+}
+
+#demo {
+  position: relative;
+  top: 25%;
+  left: 40%;
+  font-size: 50px;
+  border: 2px solid white;
+  width: 30%;
+  padding: 15px;
+}

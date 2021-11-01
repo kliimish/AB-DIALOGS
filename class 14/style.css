@@ -1,0 +1,13 @@
+button {
+  width: 80%;
+  height: 200px;
+  background-color: #6a045d;
+  color: white;
+  font-weight: 800;
+  font-size: 45px;
+}
+
+button:hover {
+  background-color: #cc08b3;
+}
+/*# sourceMappingURL=style.css.map */
